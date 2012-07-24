@@ -24,7 +24,16 @@
 
  
     <target name="qa" description="Lance les outils d'analyse">
- 
+	<phingcall target="pdepend" /> 
+    </target>
+
+
+    <target name="pdepend">
+      <phpdepend file="${project.basedir}/${source}/www">
+         <logger type="jdepend-xml" outfile="${project.basedir}/build/logs/jdepend.xml" />
+         <logger type="jdepend-chart" outfile="${project.basedir}/build/pdepend/dependencies.svg" />
+         <logger type="overview-pyramid" outfile="${project.basedir}/build/pdepend/overview-pyramid.svg" />
+      </phpdepend>
     </target>
  
 </project>
