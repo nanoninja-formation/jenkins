@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TestJenkins" default="ci" basedir="../../..">
-    <property name="source" value="job" />
+    <property name="source" value="jobs" />
  
     <target name="ci"
         description="Tâche principale d'intégration continue"
